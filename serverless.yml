@@ -16,6 +16,10 @@ provider:
 functions:
   fetchSismos:
     handler: fetchSismos.lambda_handler
+    timeout: 29
+    memorySize: 2048
+    layers:
+      - arn:aws:lambda:us-east-1:300120963396:layer:playwright-chromium:1
     package:
       include:
         - ./**
@@ -25,6 +29,12 @@ functions:
           method: get
           cors: true
           integration: lambda
+  scrapeIGP:
+    handler: handler.lambda_handler
+    timeout: 29
+    memorySize: 2048
+    layers:
+      - arn:aws:lambda:us-east-1:300120963396:layer:playwright-chromium:1
 
 resources:
   Resources:
