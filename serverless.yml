@@ -15,7 +15,7 @@ provider:
 
 functions:
   fetchSismos:
-    handler: handlers/fetchSismos.lambda_handler
+    handler: fetchSismos.lambda_handler
     package:
       include:
         - ./**
