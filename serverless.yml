@@ -1,0 +1,41 @@
+org: jhoganpachacutec
+service: api-web-scraping-igp
+
+provider:
+  name: aws
+  runtime: python3.13
+  # Default memory size for functions (default: 1024MB)
+  memorySize: 1024
+  timeout: 20
+  
+  iam:
+    role: arn:aws:iam::237501073282:role/LabRole
+  environment:
+    TABLE_SISMOS: SismosIGP
+
+functions:
+  fetchSismos:
+    handler: handlers/fetchSismos.lambda_handler
+    package:
+      include:
+        - ./**
+    events:
+      - http:
+          path: igp/sismos
+          method: get
+          cors: true
+          integration: lambda
+
+resources:
+  Resources:
+    SismosIGP:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: SismosIGP
+        BillingMode: PAY_PER_REQUEST
+        AttributeDefinitions:
+          - AttributeName: id
+            AttributeType: S
+        KeySchema:
+          - AttributeName: id
+            KeyType: HASH
