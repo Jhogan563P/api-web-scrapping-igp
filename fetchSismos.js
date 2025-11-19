@@ -8,7 +8,7 @@ const crypto = require('crypto');
 const client = new DynamoDBClient({ region: 'us-east-1' });
 const docClient = DynamoDBDocumentClient.from(client);
 
-const TABLE_NAME = 'TablaWebScrapping';
+const TABLE_NAME = 'Reportes_Sismos_IGP';
 const URL = 'https://ultimosismo.igp.gob.pe/ultimo-sismo/sismos-reportados';
 
 /**

@@ -28,7 +28,7 @@ resources:
     TablaWebScrapping:
       Type: AWS::DynamoDB::Table
       Properties:
-        TableName: TablaWebScrapping
+        TableName: Reportes_Sismos_IGP
         AttributeDefinitions:
           - AttributeName: id
             AttributeType: S
