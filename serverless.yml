@@ -1,5 +1,5 @@
 org: jpachacutec
-service: api-web-scraping
+service: api-web-scraping-igp
 
 provider:
   name: aws
@@ -51,8 +51,6 @@ plugins:
 
 package:
   individually: true
-  exclude:
-    - .git/**
-    - .gitignore
-  include:
-    - fetchSismos.js
+  - '!node_modules/**'
+  - '!tests/**'
+  - fetchSismos.js
