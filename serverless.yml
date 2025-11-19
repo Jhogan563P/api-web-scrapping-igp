@@ -51,6 +51,7 @@ plugins:
 
 package:
   individually: true
-  - '!node_modules/**'
-  - '!tests/**'
-  - fetchSismos.js
+  patterns:
+   - '!node_modules/**'
+   - '!tests/**'
+   - fetchSismos.js
