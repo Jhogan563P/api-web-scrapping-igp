@@ -1,0 +1,25 @@
+{
+  "name": "api-web-scraping",
+  "version": "1.0.0",
+  "description": "Web scraping de los sismos reportados por el IGP con Puppeteer en AWS Lambda",
+  "main": "fetchSismos.js",
+  "scripts": {
+    "deploy": "serverless deploy",
+    "remove": "serverless remove",
+    "logs": "serverless logs -f scrape_table -t"
+  },
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.620.0",
+    "@aws-sdk/lib-dynamodb": "^3.620.0",
+    "@sparticuz/chromium": "^123.0.1",
+    "puppeteer-core": "^22.12.0"
+  },
+  "devDependencies": {
+    "puppeteer": "^22.12.0",
+    "serverless": "^3.38.0",
+    "serverless-offline": "^13.3.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
