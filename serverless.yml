@@ -8,7 +8,7 @@ provider:
   memorySize: 2048  # Puppeteer necesita más memoria
   timeout: 30  # Aumentado para dar tiempo al scraping
   iam:
-    role: arn:aws:iam::413466751215:role/LabRole
+    role: arn:aws:iam::043280570137:role/LabRole
 
 functions:
   fetch_sismos:
