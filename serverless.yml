@@ -52,6 +52,9 @@ plugins:
 package:
   individually: true
   patterns:
-   - '!node_modules/**'
-   - '!tests/**'
-   - fetchSismos.js
+    - fetchSismos.js
+    - node_modules/puppeteer-core/**
+    - node_modules/@sparticuz/**
+    - node_modules/@aws-sdk/**
+    - '!node_modules/puppeteer/**'
+    - '!tests/**'
