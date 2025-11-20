@@ -1,4 +1,4 @@
-org: jpachacutec
+org: jhoganpachacutec
 service: api-web-scraping-igp
 
 provider:
@@ -8,7 +8,7 @@ provider:
   memorySize: 2048  # Puppeteer necesita más memoria
   timeout: 30  # Aumentado para dar tiempo al scraping
   iam:
-    role: arn:aws:iam::237501073282:role/LabRole
+    role: arn:aws:iam::413466751215:role/LabRole
 
 functions:
   fetch_sismos:
